@@ -1,0 +1,26 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "mdb-vue-ui-kit": "^4.1.1",
+    "naive-ui": "^2.40.3",
+    "vue": "^3.4.19",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.1.4"
+  },
+  "description": "This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.",
+  "main": "vite.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
