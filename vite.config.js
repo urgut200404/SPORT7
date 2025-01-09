@@ -1,22 +1,22 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+// import { defineConfig } from 'vite'
+// import vue from '@vitejs/plugin-vue'
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [vue()],
-  build:{
-    rollupOptions:{
-      external: ['naive-ui'],
-      output:{
-        manualChunks(id){
-          if(id.includes("node_modules")){
-            return id.toString().split('node_modules')[1].split('/').toString()
-          }
-        }
-      }
-    }
-  }
-})
+// // https://vitejs.dev/config/
+// export default defineConfig({
+//   plugins: [vue()],
+//   build:{
+//     rollupOptions:{
+//       external: ['naive-ui'],
+//       output:{
+//         manualChunks(id){
+//           if(id.includes("node_modules")){
+//             return id.toString().split('node_modules')[1].split('/').toString()
+//           }
+//         }
+//       }
+//     }
+//   }
+// })
 
 
 
@@ -26,7 +26,39 @@ export default defineConfig({
 //   plugins: [vue()],
 //   build: {
 //     rollupOptions: {
+
 //       external: ['naive-ui'],
 //     },
 //   },
 // });
+
+
+
+
+
+
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [vue()],
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
