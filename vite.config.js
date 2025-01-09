@@ -61,7 +61,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-       // external: ['naive-ui'],
+       external: ['@canvasjs/vue-charts'],
        output:{
         manualChunks(id){
           if(id.includes("node_modules")){
@@ -73,7 +73,10 @@ export default defineConfig({
   },
 })
 
- 
+
+
+
+
 
 
 
