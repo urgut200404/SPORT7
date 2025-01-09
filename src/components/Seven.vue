@@ -53,8 +53,8 @@
                     <div class="w-50">
                         <!-- <CanvasJSChart :options="options" /> -->
                         <div class="container">
-                            <CanvasJSChart :options="newVSReturningVisitorsOptions" @chart-ref="chartRef"
-                                :styles="styleOptions" />
+                           <!-- <CanvasJSChart :options="newVSReturningVisitorsOptions" @chart-ref="chartRef"
+                                :styles="styleOptions" /> -->
                             <button class="back-button" v-if="showBackButton" @click="handleClick"
                                 :style="buttonStyle">&lt; Back</button>
                         </div>
@@ -117,7 +117,7 @@
                 </p>
 
                 <div class="mt-5 mb-5">
-                    <CanvasJSChart :options="chartOptions" />
+                   <!-- <CanvasJSChart :options="chartOptions" /> -->
                 </div>
             </div>
             <div>
@@ -242,173 +242,127 @@ const buttonStyle = ref({
     backgroundColor: "#F25F5C"
 });
 
-const chartOptions = ref({
-    animationEnabled: true,
-    title: {
-        text: "Sog‘lom turmush tarzi va uning yetti qoidasi bo‘yicha kunlik vaqt taqsimoti"
-    },
-    data: [{
-        type: "pie",
-        startAngle: 140,
-        toolTipContent: "<b>{label}</b>: {y} daqiqa",
-        showInLegend: true,
-        legendText: "{label}",
-        indexLabelFontSize: 16,
-        indexLabel: "{label} - {y} daqiqa",
-        dataPoints: [
-            { label: "Yetarli uyqu (7-8 soat)", y: 480 },
-            { label: "Erta uyg‘onish va jismoniy mashqlar (30 min)", y: 30 },
-            { label: "Toza havo (15-30 min)", y: 20 },
-            { label: "Suv ichish (8 stakan)", y: 10 },
-            { label: "Sog‘lom ovqatlanish (3-5 mahal)", y: 60 },
-            { label: "Texnologiyadan uzoqlashish (1-2 soat)", y: 90 },
-            { label: "O‘zini rivojlantirish (30 min)", y: 30 }
-        ]
-    }]
-});
-
-// const chartOptions1 = ref({
+// const chartOptions = ref({
 //     animationEnabled: true,
 //     title: {
-//         text: "Ijobiy kayfiyatni ifodalovchi diagramma"
+//         text: "Sog‘lom turmush tarzi va uning yetti qoidasi bo‘yicha kunlik vaqt taqsimoti"
 //     },
 //     data: [{
 //         type: "pie",
 //         startAngle: 140,
-//         toolTipContent: "<b>{label}</b>: {y}%",
+//         toolTipContent: "<b>{label}</b>: {y} daqiqa",
 //         showInLegend: true,
 //         legendText: "{label}",
 //         indexLabelFontSize: 16,
-//         indexLabel: "{label} - {y}%",
+//         indexLabel: "{label} - {y} daqiqa",
 //         dataPoints: [
-//             { label: "Baxt", y: 40 },
-//             { label: "Sevgi", y: 25 },
-//             { label: "Shukronalik", y: 15 },
-//             { label: "Tinchlik", y: 10 },
-//             { label: "Motivatsiya", y: 5 },
-//             { label: "O‘z-o‘zini qadrlash", y: 5 }
+//             { label: "Yetarli uyqu (7-8 soat)", y: 480 },
+//             { label: "Erta uyg‘onish va jismoniy mashqlar (30 min)", y: 30 },
+//             { label: "Toza havo (15-30 min)", y: 20 },
+//             { label: "Suv ichish (8 stakan)", y: 10 },
+//             { label: "Sog‘lom ovqatlanish (3-5 mahal)", y: 60 },
+//             { label: "Texnologiyadan uzoqlashish (1-2 soat)", y: 90 },
+//             { label: "O‘zini rivojlantirish (30 min)", y: 30 }
 //         ]
 //     }]
 // });
 
-// const chartOptions1 = ref({
-//   animationEnabled: true,
-//   title: {
-//     text: "Ijobiy kayfiyatni ifodalovchi diagramma"
-//   },
-//   data: [{
-//     type: "pie",
-//     startAngle: 140,
-//     toolTipContent: "<b>{label}</b>: {y}%",
-//     showInLegend: true,
-//     legendText: "{label}",
-//     indexLabelFontSize: 16,
-//     indexLabel: "{label} - {y}%",
-//     dataPoints: [
-//       { label: "Baxt", y: 40 },
-//       { label: "Sevgi", y: 25 },
-//       { label: "Shukronalik", y: 15 },
-//       { label: "Tinchlik", y: 10 },
-//       { label: "Motivatsiya", y: 5 },
-//       { label: "O‘z-o‘zini qadrlash", y: 5 }
-//     ]
-//   }]
+ 
+// const visitorsDrilldownedChartOptions = ref({
+//     animationEnabled: true,
+//     theme: "light2",
+//     axisY: {
+//         gridThickness: 0,
+//         lineThickness: 1
+//     },
+//     data: []
 // });
-const visitorsDrilldownedChartOptions = ref({
-    animationEnabled: true,
-    theme: "light2",
-    axisY: {
-        gridThickness: 0,
-        lineThickness: 1
-    },
-    data: []
-});
 
-const newVSReturningVisitorsOptions = ref({
-    animationEnabled: true,
-    theme: "light2",
-    title: {
-        text: "Ovqatlanish rasionining Diagrammasi",
-        // backgroundColor: "",
-        // fontColor:"white",
-    },
-    subtitles: [{
-        text: "Drilldown uchun har qanday segmentni bosing",
-        backgroundColor: "#EA5C59",
-        fontSize: 16,
-        fontColor: "white",
-        padding: 5
-    }],
-    data: []
-});
+// const newVSReturningVisitorsOptions = ref({
+//     animationEnabled: true,
+//     theme: "light2",
+//     title: {
+//         text: "Ovqatlanish rasionining Diagrammasi",
+//         // backgroundColor: "",
+//         // fontColor:"white",
+//     },
+//     subtitles: [{
+//         text: "Drilldown uchun har qanday segmentni bosing",
+//         backgroundColor: "#EA5C59",
+//         fontSize: 16,
+//         fontColor: "white",
+//         padding: 5
+//     }],
+//     data: []
+// });
 
-const options = ref({
-    "New vs Returning Visitors": [{
-        type: "pie",
-        name: "New vs Returning Visitors",
-        startAngle: 90,
-        cursor: "pointer",
-        explodeOnClick: false,
-        showInLegend: true,
-        legendMarkerType: "square",
-        click: visitorsChartDrilldownHandler,
-        indexLabelPlacement: "inside",
-        indexLabelFontColor: "white",
-        dataPoints: [
-            { y: 5, name: "shirinlik va yog‘larga ajratilishi lozim", color: "orange", indexLabel: "5 %" },
-            { y: 30, name: "go‘sht va sut mahsulotlari", color: "#F25F5C", indexLabel: "30 %" },
-            { y: 65, name: "Meva va sabzavotlar", color: "rgba(22, 210, 110, 0.726)", indexLabel: "65%" }
-        ]
-    }],
-    "New Visitors": [{
-        color: "#F25F5C",
-        name: "New Visitors",
-        type: "column",
-        dataPoints: [
-            { label: "Jan", y: 42600 },
-            // More data points here...
-            { label: "Dec", y: 54400 }
-        ]
-    }],
-    "Returning Visitors": [{
-        color: "#FFE066",
-        name: "Returning Visitors",
-        type: "column",
-        dataPoints: [
-            { label: "Jan", y: 21800 },
-            // More data points here...
-            { label: "Dec", y: 31400 }
-        ]
-    }]
-});
+// const options = ref({
+//     "New vs Returning Visitors": [{
+//         type: "pie",
+//         name: "New vs Returning Visitors",
+//         startAngle: 90,
+//         cursor: "pointer",
+//         explodeOnClick: false,
+//         showInLegend: true,
+//         legendMarkerType: "square",
+//         click: visitorsChartDrilldownHandler,
+//         indexLabelPlacement: "inside",
+//         indexLabelFontColor: "white",
+//         dataPoints: [
+//             { y: 5, name: "shirinlik va yog‘larga ajratilishi lozim", color: "orange", indexLabel: "5 %" },
+//             { y: 30, name: "go‘sht va sut mahsulotlari", color: "#F25F5C", indexLabel: "30 %" },
+//             { y: 65, name: "Meva va sabzavotlar", color: "rgba(22, 210, 110, 0.726)", indexLabel: "65%" }
+//         ]
+//     }],
+//     "New Visitors": [{
+//         color: "#F25F5C",
+//         name: "New Visitors",
+//         type: "column",
+//         dataPoints: [
+//             { label: "Jan", y: 42600 },
+//             // More data points here...
+//             { label: "Dec", y: 54400 }
+//         ]
+//     }],
+//     "Returning Visitors": [{
+//         color: "#FFE066",
+//         name: "Returning Visitors",
+//         type: "column",
+//         dataPoints: [
+//             { label: "Jan", y: 21800 },
+//             // More data points here...
+//             { label: "Dec", y: 31400 }
+//         ]
+//     }]
+// });
 
-const styleOptions = ref({
-    width: "100%",
-    height: "360px"
-});
+// const styleOptions = ref({
+//     width: "100%",
+//     height: "360px"
+// });
 
-function visitorsChartDrilldownHandler(e) {
-    chart.value.options = visitorsDrilldownedChartOptions.value;
-    chart.value.options.data = options.value[e.dataPoint.name];
-    buttonStyle.value.backgroundColor = options.value[e.dataPoint.name][0].color;
-    chart.value.options.title = { text: e.dataPoint.name };
-    chart.value.render();
-    showBackButton.value = true;
-}
+// function visitorsChartDrilldownHandler(e) {
+//     chart.value.options = visitorsDrilldownedChartOptions.value;
+//     chart.value.options.data = options.value[e.dataPoint.name];
+//     buttonStyle.value.backgroundColor = options.value[e.dataPoint.name][0].color;
+//     chart.value.options.title = { text: e.dataPoint.name };
+//     chart.value.render();
+//     showBackButton.value = true;
+// }
 
-function handleClick() {
-    chart.value.options = newVSReturningVisitorsOptions.value;
-    chart.value.options.data = options.value["New vs Returning Visitors"];
-    chart.value.render();
-    showBackButton.value = false;
-}
+// function handleClick() {
+//     chart.value.options = newVSReturningVisitorsOptions.value;
+//     chart.value.options.data = options.value["New vs Returning Visitors"];
+//     chart.value.render();
+//     showBackButton.value = false;
+// }
 
-function chartRef(chartInstance) {
-    chart.value = chartInstance;
-    chart.value.options = newVSReturningVisitorsOptions.value;
-    chart.value.options.data = options.value["New vs Returning Visitors"];
-    chart.value.render();
-}
+// function chartRef(chartInstance) {
+//     chart.value = chartInstance;
+//     chart.value.options = newVSReturningVisitorsOptions.value;
+//     chart.value.options.data = options.value["New vs Returning Visitors"];
+//     chart.value.render();
+// }
 </script>
 
 <style scoped>
