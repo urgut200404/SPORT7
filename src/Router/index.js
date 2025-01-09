@@ -41,13 +41,13 @@ const router = createRouter({
         }, 
         {
             path:"/search", 
-            nam:"search", 
+            name:"search", 
             meta:{title:"Search"}, 
             component: ()=> import("../components/Smht.vue")
         },
         {
             path:"/fakultet", 
-            nam:"fakultet", 
+            name:"fakultet", 
             meta:{title:"JDPU Fakultet Haqida"}, 
             component: ()=> import("../components/Fakultet_h.vue")
         },
