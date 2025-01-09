@@ -83,12 +83,12 @@
                                         Jismoniy tarbiya va sog‘lom turmush tarzi
                                     </MDBDropdownToggle>
                                     <MDBDropdownMenu aria-labelledby="dropdownMenuButton" id="drop_child_pages">
-                                        <MDBDropdownItem href="/jdpu"><router-link :to="{name:'jdpu'}">JDPU Ta'lim  Yo'nalishlar</router-link></MDBDropdownItem>
-                                        <MDBDropdownItem href="#"> <i class="fas fa-utensils d-none"></i> Sport va To'g'ri Ovqatlanish</MDBDropdownItem>
-                                        <MDBDropdownItem href="#"><i class="fas fa-book d-none"></i> Ilmiy Maqolalar</MDBDropdownItem> 
-                                        <MDBDropdownItem href="/seven"><i class="fas fa-dumbbell d-none"></i> Sog‘lom turmush tarzi va uning 7 qoidasi</MDBDropdownItem>
-                                        <MDBDropdownItem href="#"><i class="fas fa-sitemap d-none"></i> Samsung Heath haqida malumot</MDBDropdownItem>
-                                        <MDBDropdownItem href="#"><i class="fas fa-sitemap d-none"></i> Jismoniy tarbiyaning sog‘liqqa foydalari</MDBDropdownItem>
+                                        <MDBDropdownItem href="/jdpu">JDPU Ta'lim  Yo'nalishlar</MDBDropdownItem>
+                                        <MDBDropdownItem href="#"> Sport va To'g'ri Ovqatlanish</MDBDropdownItem>
+                                        <MDBDropdownItem href="#">Ilmiy Maqolalar</MDBDropdownItem> 
+                                        <MDBDropdownItem href="/seven"> Sog‘lom turmush tarzi va uning 7 qoidasi</MDBDropdownItem>
+                                        <MDBDropdownItem href="#"> Samsung Heath haqida malumot</MDBDropdownItem>
+                                        <MDBDropdownItem href="#">Jismoniy tarbiyaning sog‘liqqa foydalari</MDBDropdownItem>
                                     </MDBDropdownMenu>
                                 </MDBDropdown>
                             </MDBNavbarItem>
