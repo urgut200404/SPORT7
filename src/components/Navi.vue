@@ -83,10 +83,10 @@
                                         Jismoniy tarbiya va sog‘lom turmush tarzi
                                     </MDBDropdownToggle>
                                     <MDBDropdownMenu aria-labelledby="dropdownMenuButton" id="drop_child_pages">
-                                        <MDBDropdownItem href="/jdpu">JDPU Ta'lim  Yo'nalishlar</MDBDropdownItem>
+                                        <router-link :to="{name:'jdpu'}" class="dropdown-item">JDPU Ta'lim  Yo'nalishlar</router-link>
                                         <MDBDropdownItem href="#"> Sport va To'g'ri Ovqatlanish</MDBDropdownItem>
                                         <MDBDropdownItem href="#">Ilmiy Maqolalar</MDBDropdownItem> 
-                                        <MDBDropdownItem href="/seven"> Sog‘lom turmush tarzi va uning 7 qoidasi</MDBDropdownItem>
+                                        <router-link :to="{name:'seven'}" class="dropdown-item">Sog‘lom turmush tarzi va uning 7 qoidasi</router-link>
                                         <MDBDropdownItem href="#"> Samsung Heath haqida malumot</MDBDropdownItem>
                                         <MDBDropdownItem href="#">Jismoniy tarbiyaning sog‘liqqa foydalari</MDBDropdownItem>
                                     </MDBDropdownMenu>
