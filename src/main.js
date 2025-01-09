@@ -21,8 +21,7 @@ import App from './App.vue'
 import router from './Router/index.js'
 import naive from "naive-ui" 
 
-// import * as CanvasJS from '@canvasjs/vue-charts';
-import CanvasJSChart from './libs/canvasjs/vue-charts.js';
+import * as CanvasJS from '@canvasjs/vue-charts'; 
 
 
 const app = createApp(App)
