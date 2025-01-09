@@ -21,12 +21,12 @@ import App from './App.vue'
 import router from './Router/index.js'
 import naive from "naive-ui" 
 
-import * as CanvasJS from '@canvasjs/vue-charts'; 
+// import * as CanvasJS from '@canvasjs/vue-charts'; 
 
 
 const app = createApp(App)
 
 app.use(router)
 app.use(naive)  
-app.component('CanvasJSChart', CanvasJS.CanvasJSChart); // Komponentni registratsiya qilyapmiz
+// app.component('CanvasJSChart', CanvasJS.CanvasJSChart); // Komponentni registratsiya qilyapmiz
 app.mount('#app')
