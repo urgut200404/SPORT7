@@ -231,10 +231,10 @@
 </template>
 
 <script setup>
-import { ref, h, onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import Navi from './Navi.vue';
 import Footer from './Footer7.vue'
-import { NButton, useMessage } from "naive-ui";
+// import { NButton, useMessage } from "naive-ui";
 const chart = ref(null);
 const showBackButton = ref(false);
 

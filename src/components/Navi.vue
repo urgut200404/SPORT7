@@ -228,7 +228,7 @@ let search_books_fung = (async()=>{
     border-radius: 50% !important;
     width: 50px !important;
     height: 50px !important;
-    background: url("../Images/avatar.png");
+    background: url("../assets/user12.png");
     background-size: cover;
 
 }

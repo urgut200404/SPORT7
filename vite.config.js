@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [vue()],
   build:{
     rollupOptions:{
-      external: ['naive-ui', 'naive-ui/es'],
+      external: ['naive-ui'],
       output:{
         manualChunks(id){
           if(id.includes("node_modules")){
