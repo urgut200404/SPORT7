@@ -56,7 +56,7 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      '@canvasjs/vue-charts': 'node_modules/@canvasjs/vue-charts'
+      '@canvasjs/vue-charts': '/node_modules/@canvasjs/vue-charts/dist/index.js',
     },
   },
   build: {
