@@ -90,7 +90,7 @@
                                         <router-link :to="{name:'ggfit'}" class="dropdown-item">Google Fit haqida malumot</router-link>
                                         <router-link :to="{name:'strava'}" class="dropdown-item">Strava haqida malumot</router-link>
 
-                                        <MDBDropdownItem >  Sport va To'g'ri Ovqatlanish</MDBDropdownItem>
+                                        <!-- <MDBDropdownItem >  Sport va To'g'ri Ovqatlanish</MDBDropdownItem> -->
                                         <MDBDropdownItem >Ilmiy Maqolalar</MDBDropdownItem> 
                                     </MDBDropdownMenu>
                                 </MDBDropdown>
@@ -104,7 +104,7 @@
                                 Qizlar uchun
                             </MDBNavbarItem>
                             <MDBNavbarItem to="/jdpu">
-                                Fakultet haqida
+                                Main Jdpu Uz 
                             </MDBNavbarItem>
                         </MDBNavbarNav>
                         <!-- Search form -->

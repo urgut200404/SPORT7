@@ -1,12 +1,12 @@
- <template  >
+<template>
   <div>
-      <div v-if="spins" class="spinner_uchun_still">
-      <div class="spinner-border" style="width: 200px;height: 200px;">
-      </div>
- 
+    <!-- Spinner ko'rsatish -->
+    <div v-if="spins" class="spinner_uchun_still">
+      <div class="spinner-border" style="width: 200px; height: 200px;"></div>
     </div>
- 
-    <div v-else="spins">
+
+    <!-- Router komponentlar -->
+    <div v-else>
       <router-view v-slot="{ Component }">
         <transition name="fade">
           <component :is="Component" />
@@ -14,28 +14,25 @@
       </router-view>  
     </div>
   </div>
- </template>
- <script setup> 
- import { MDBSpinner } from "mdb-vue-ui-kit";
-import { onMounted, ref, computed } from "vue";
-// import * as mdb from 'mdb-ui-kit'; // lib
-// window.mdb = mdb;
+</template>
+
+<script setup>
+import { onMounted, ref } from "vue";
+
 let spins = ref(true);
-let sp = onMounted(async () => {
- setTimeout(() => {
-  spins.value=false;
- }, 1500);
-})
 
-sp();
- </script >
- <style >
+onMounted(() => {
+  setTimeout(() => {
+    spins.value = false;
+  }, 1500);
+});
+</script>
 
- .router-link-active{
+<style>
+.router-link-active {
   border-bottom: solid rgba(67, 43, 226, 0.353);
-  /* border-radius: 5px; */
- }
- 
+}
+
 .fade-enter-active {
   transition: all 0.5s linear;
   transform: scale(1);
@@ -48,22 +45,17 @@ sp();
   filter: contrast(0%);
 }
 
-
 .spinner_uchun_still {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100% !important;
-   
+  width: 100%;
   height: 100vh;
   font-size: 50px;
   gap: 20px;
   position: absolute;
   z-index: 789;
   backdrop-filter: brightness(80%);
-  /* filter: brightness(50%); */
-  /* backdrop-filter: brightness(50%); */
-  /* filter: brightness(); */
 }
- </style>
+</style>

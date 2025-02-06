@@ -111,8 +111,8 @@ import Comments from './Comments.vue';
 <style scoped>
 @media (max-width:576px){
     .ggfit_nuxtjs_st img{
-        width: 114px;
-        height: 200px !important;
+        width: 124px;
+        height: 270px !important;
     }
     .hhtp_aiPY{
         font-size: 12px !important;

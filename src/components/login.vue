@@ -3,14 +3,15 @@
         <div style=" width: 420px;">
             <form class="form_ajax-frm">
                 <MDBDropdown class="nav-item float-end mt-3 me-3" v-model="dropdown1">
-                    <MDBDropdownToggle tag="a" class="nav-link drop_menu" @click="dropdown1 = !dropdown1"><i class="fas fa-ellipsis-vertical"></i>
+                    <MDBDropdownToggle tag="a" class="nav-link drop_menu" @click="dropdown1 = !dropdown1"><i
+                            class="fas fa-ellipsis-vertical"></i>
                     </MDBDropdownToggle>
                     <MDBDropdownMenu aria-labelledby="dropdownMenuButton" id="drop_child_pages">
                         <MDBDropdownItem href="/"><i class="fas fa-house"></i> Asosiy Sahifa
                         </MDBDropdownItem>
                         <MDBDropdownItem href="#"><i class="fas fa-repeat"></i> Parolni Tiklash
                         </MDBDropdownItem>
-                         <hr>
+                        <hr>
                         <MDBDropdownItem href="#"><i class="fas fa-repeat d-none"></i> Statistika
                         </MDBDropdownItem>
                     </MDBDropdownMenu>
@@ -22,7 +23,7 @@
                         <span style="font-size: 12px;">JISMONIY Madaniyat Kafedrasi</span>
                     </div>
                     <div data-mdb-input-init class=" mb-4 ">
-                        <input type="email" class="form-control" placeholder="Login" required />
+                        <input type="text" class="form-control" placeholder="Login" required />
                     </div>
                     <div data-mdb-input-init class="mb-4">
                         <input type="password" class="form-control" placeholder="Parol" required />
@@ -40,8 +41,9 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" data-mdb-ripple-init class="btn w-100 btn-outline-dark with_hemis">Hemis orqali
-                    kirish</button>
+                <a type="button" data-mdb-ripple-init class="btn w-100 btn-outline-dark with_hemis "
+                    href="https://id.egov.uz/">OneId orqali
+                    kirish</a>
             </form>
             <p class="v-dev"> <b>Dastur versiyasi</b>: 0.9.20 / <b>UID:</b> 351 / <b>Sana: </b>{{ vaqt }}</p>
         </div>
@@ -54,17 +56,6 @@
         <n-qr-code :value="text" />
         <n-input v-model:value="text" :maxlength="60" type="text" />
     </n-space>
-
-    <div class="login-container d-none">
-        <h1>Login</h1>
-        <div class="number-animate" number-animate-start="10" number-animate-end="110" number-animate-increment="1">
-        </div>
-        <div class="number-animate" number-animate-start="7500" number-animate-end="8000" number-animate-increment="2">
-        </div>
-        <form>
-            <!-- Login formasi maydonlari -->
-        </form>
-    </div>
 </template>
 
 <script setup>
@@ -76,6 +67,7 @@ import { MDBBtn, MDBIcon, MDBNavbar, MDBNavbarToggler, MDBNavbarBrand, MDBNavbar
 
 const vaqt = ref('');
 const dropdown1 = ref(false);
+
 const timeFung = () => {
     const data = new Date();
     const yil = data.getFullYear();
@@ -94,70 +86,81 @@ onMounted(() => {
 });
 
 // const text = ref("The rain dampened the sky");
-const startCounterAnimation = () => {
-    const counters = document.getElementsByClassName('number-animate');
+// const startCounterAnimation = () => {
+//     const counters = document.getElementsByClassName('number-animate');
 
-    for (let i = 0; i < counters.length; i++) {
-        const counter = counters[i];
-        const startNumber = +counter.getAttribute('number-animate-start');
-        const target = +counter.getAttribute('number-animate-end');
-        const delay = +counter.getAttribute('number-animate-delay');
-        const add = +counter.getAttribute('number-animate-increment');
-        let current = startNumber;
-        let animationId;
-        let isInView = false;
+//     for (let i = 0; i < counters.length; i++) {
+//         const counter = counters[i];
+//         const startNumber = +counter.getAttribute('number-animate-start');
+//         const target = +counter.getAttribute('number-animate-end');
+//         const delay = +counter.getAttribute('number-animate-delay');
+//         const add = +counter.getAttribute('number-animate-increment');
+//         let current = startNumber;
+//         let animationId;
+//         let isInView = false;
 
-        const updateCounter = () => {
-            if (current >= target) {
-                clearInterval(animationId);
-            } else if (add) {
-                current += add;
-                counter.textContent = current;
-            } else {
-                current++;
-                counter.textContent = current;
-            }
-        };
+//         const updateCounter = () => {
+//             if (current >= target) {
+//                 clearInterval(animationId);
+//             } else if (add) {
+//                 current += add;
+//                 counter.textContent = current;
+//             } else {
+//                 current++;
+//                 counter.textContent = current;
+//             }
+//         };
 
-        const checkInView = () => {
-            const rect = counter.getBoundingClientRect();
-            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+//         const checkInView = () => {
+//             const rect = counter.getBoundingClientRect();
+//             const windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
-            const inView = (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= windowHeight
-            );
+//             const inView = (
+//                 rect.top >= 0 &&
+//                 rect.left >= 0 &&
+//                 rect.bottom <= windowHeight
+//             );
 
-            if (inView && !isInView) {
-                isInView = true;
-                current = startNumber;
-                counter.textContent = current;
-                animationId = setInterval(updateCounter, delay);
-                counter.style.opacity = 1;
-            } else if (!inView && isInView) {
-                isInView = false;
-                clearInterval(animationId);
-                current = startNumber;
-                counter.textContent = current;
-                counter.style.opacity = 0;
-            }
-        };
+//             if (inView && !isInView) {
+//                 isInView = true;
+//                 current = startNumber;
+//                 counter.textContent = current;
+//                 animationId = setInterval(updateCounter, delay);
+//                 counter.style.opacity = 1;
+//             } else if (!inView && isInView) {
+//                 isInView = false;
+//                 clearInterval(animationId);
+//                 current = startNumber;
+//                 counter.textContent = current;
+//                 counter.style.opacity = 0;
+//             }
+//         };
 
-        window.addEventListener('scroll', checkInView);
-        window.addEventListener('resize', checkInView);
-        checkInView(); // Check if already in view on page load
-    }
-};
+//         window.addEventListener('scroll', checkInView);
+//         window.addEventListener('resize', checkInView);
+//         checkInView(); // Check if already in view on page load
+//     }
+// };
 
 // Call the function when the component is mounted
-onMounted(() => {
-    startCounterAnimation();
-});
+// onMounted(() => {
+//     startCounterAnimation();
+// });
 </script>
 
 <style scoped>
-.dropdown-toggle::after{
+@media (max-width:576px) {
+    .container7>div { 
+        width:auto !important;
+        transform:scale(0.6);
+    }
+
+     
+}
+
+
+
+.dropdown-toggle::after {
     display: none;
 }
 
@@ -187,6 +190,8 @@ button {
 
 .with_hemis {
     background: #605ca8 !important;
+    color: #fff;
+    text-transform: capitalize;
     border: none;
     border-radius: 0;
 }

@@ -72,7 +72,7 @@
                     <a href="https://main.jdpu.uz/">
                         <div class="system_dv">
                             <img src="../assets/main.png" alt="">
-                            <p>Boshaqaruv tizimi</p>
+                            <p class="text-center"> Main Jdpu Uz </p>
                         </div>
                     </a>
                     <a href="https://110.jdpu.uz/">
