@@ -31,7 +31,7 @@
                         </div>
                         <div class="user-info">
                             <span>Yassine Zanina</span>
-                            <p>Wednesday, March 13th at 2:45pm</p>
+                            <p>Wednesday, March 14th at 2:45pm</p>
                         </div>
                     </div>
                     <p class="comment-content"> I've been using this Platform for a while now and I'm really impressed! The interface is intuitive and easy to use, and the features are just what I needed to streamline my workflow.
@@ -68,7 +68,7 @@
                         </div>
                         <div class="user-info">
                             <span>Павел Дуров</span>
-                            <p>Wednesday, March 12th at 10:15pm</p>
+                            <p>Wednesday, March 13th at 10:15pm</p>
                         </div>
                     </div>
                     <p class="comment-content">
@@ -146,7 +146,7 @@
                         </div>
                         <div class="user-info">
                             <span>Yassine Zanina</span>
-                            <p>Wednesday, March 13th at 2:45pm</p>
+                            <p>Wednesday, March 11th at 2:45pm</p>
                         </div>
                     </div>
                     <p class="comment-content">

@@ -6,7 +6,7 @@
             <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom text-light">
                 <!-- Left -->
                 <div class="me-5 d-none d-lg-block">
-                    <span>Get connected with us on social networks:</span>
+                    <span>Jismoniy Madaniyat Kafedrasi</span>
                 </div>
                 <!-- Left -->
 
@@ -70,7 +70,10 @@
                                 <a href="#!" class="text-reset borlink7878">Qo'llanma</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset borlink7878">Sport</a>
+                                <a href="/login" class="text-reset borlink7878">Tizimga kirish</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset borlink7878">JDPU Ta'lim yo'nalishlari</a>
                             </p>
                         </MDBCol>
                         <!-- Grid column -->
@@ -91,6 +94,10 @@
                             <p>
                                 <a href="/boys" class="text-reset borlink7878">O'g'il bollalar uchun</a>
                             </p>
+
+                            <p>
+                                <a href="/boys" class="text-reset borlink7878">Main Jdpu UZ</a>
+                            </p>
                         </MDBCol>
                         <!-- Grid column -->
 
@@ -107,11 +114,23 @@
                             </p>
                             <p>
                                 <MDBIcon icon="phone" class="link-light" /><sub class="me-2">1</sub>
-                                72-226-68-10
+                                +(99872) 226 68 10
                             </p>
                             <p>
                                 <MDBIcon icon="phone" class="link-light" /><sub class="me-2">2</sub>
-                                72-221-55-16 
+                                +(99872) 221 55 16 
+                            </p>
+                            <p class="send_msg">
+                                <!-- <input type="text"><button><i class="fas fa-paper-plane"/></button> -->
+                                <div class="d-lg-block">
+                                        <form class="d-flex input-group p-0" action="https://t.me/jdpu_axborot_bot" method="get">
+                                            <input type="text" class="form-control text-light" placeholder="Biz bilan boglaning"
+                                                aria-label="text" required />
+                                            <MDBBtn class="bg-dark telegram_icon_uchun" type="submit">
+                                                <MDBIcon class="text-light fs-4" iconStyle="fab" icon="telegram"></MDBIcon>
+                                            </MDBBtn>
+                                        </form>
+                                    </div>
                             </p>
                         </MDBCol>
                         <!-- Grid column -->
@@ -133,20 +152,29 @@
 </template>
 
 <script setup>
-import { MDBFooter, MDBIcon, MDBRow, MDBCol, MDBContainer } from "mdb-vue-ui-kit";
+import { MDBFooter, MDBIcon, MDBRow, MDBCol, MDBContainer , MDBBtn} from "mdb-vue-ui-kit";
 import {ref} from "vue";
 </script>
 
 <style scoped>
-
- 
-
-/* .borlink7878{ 
-    padding-bottom: 5px;
-    position: relative;  
-} */
+.telegram_icon_uchun {
+    /* background: rgba(233, 99, 10, 0.789) !important; */
+    background: rgba(246, 123, 9, 0.842) !important;
+}
 
 
+#iconlar_va_forma_uchunn {
+    z-index: 100 !important;
+}
+
+form [type="text"] {
+    /* background: #3e3a3a; */
+    background: #323030 !important;
+    color: #ffff;
+    border: none;
+    height: 48px;
+} 
+::placeholder{color: #ffffff66;}
 .logo_js_jdpu{
     width: 40%;
 }
