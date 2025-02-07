@@ -64,8 +64,7 @@
                         <a href="/">
                             <img src="../assets/channels4_profile.jpg" alt="" id="web_logo">
                         </a>
-                        <div class="logo_text ms-1">
-                            <!-- <p>Samarqand Davlat Unversititi <br> Urgut Filali, Online Kutubxona <br>Markazi </p> -->
+                        <div class="logo_text ms-1"> 
                             <p><span class="onlLi">JDPU</span> <br> <span style="font-size: 15px;">O'z Sog'lig'ingizni Nazorat qiling</span></p>
                             <p></p>
                         </div>
@@ -103,9 +102,9 @@
                             <MDBNavbarItem to="/girls">
                                 Qizlar uchun
                             </MDBNavbarItem>
-                            <MDBNavbarItem to="/jdpu">
-                                Main Jdpu Uz 
-                            </MDBNavbarItem>
+                           <MDBNavbarItem tag="a" href="https://main.jdpu.uz/" target="_blank">
+                              Main Jdpu Uz
+                        </MDBNavbarItem>
                         </MDBNavbarNav>
                         <!-- Search form -->
 
