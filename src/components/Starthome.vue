@@ -75,12 +75,12 @@
                             <p class="text-center"> Main Jdpu Uz </p>
                         </div>
                     </a>
-                    <a href="https://110.jdpu.uz/">
+                   <!-- <a href="https://110.jdpu.uz/">
                         <div class="system_dv">
                             <img src="../assets/110.png" alt="">
                             <p>110 ballik tizim</p>
                         </div>
-                    </a>
+                    </a> -->
 
                 </div>
             </div>
