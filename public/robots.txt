@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yo-hay99.netlify.app/sitemap.xml
